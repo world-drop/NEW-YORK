@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E891D7502D1342E400CD309F /* FetchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E891D74F2D1342E400CD309F /* FetchData.swift */; };
+		E891D7522D1342EF00CD309F /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E891D7512D1342EF00CD309F /* ViewState.swift */; };
 		EEFF2BA12D133DD200ED55DC /* NEW_YORKApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFF2BA02D133DD200ED55DC /* NEW_YORKApp.swift */; };
 		EEFF2BA32D133DD200ED55DC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFF2BA22D133DD200ED55DC /* ContentView.swift */; };
 		EEFF2BA52D133DD300ED55DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEFF2BA42D133DD300ED55DC /* Assets.xcassets */; };
@@ -14,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E891D74F2D1342E400CD309F /* FetchData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FetchData.swift; path = ../../../NewsAPI/NewsAPI/Model/FetchData.swift; sourceTree = "<group>"; };
+		E891D7512D1342EF00CD309F /* ViewState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewState.swift; path = ../../../NewsAPI/NewsAPI/Model/ViewState.swift; sourceTree = "<group>"; };
 		EEFF2B9D2D133DD200ED55DC /* NEW YORK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NEW YORK.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEFF2BA02D133DD200ED55DC /* NEW_YORKApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NEW_YORKApp.swift; sourceTree = "<group>"; };
 		EEFF2BA22D133DD200ED55DC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,6 +36,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E891D74D2D1342CA00CD309F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E891D74F2D1342E400CD309F /* FetchData.swift */,
+				E891D7512D1342EF00CD309F /* ViewState.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E891D74E2D1342D300CD309F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EEFF2BA22D133DD200ED55DC /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		EEFF2B942D133DD200ED55DC = {
 			isa = PBXGroup;
 			children = (
@@ -51,8 +72,9 @@
 		EEFF2B9F2D133DD200ED55DC /* NEW YORK */ = {
 			isa = PBXGroup;
 			children = (
+				E891D74E2D1342D300CD309F /* Views */,
+				E891D74D2D1342CA00CD309F /* Models */,
 				EEFF2BA02D133DD200ED55DC /* NEW_YORKApp.swift */,
-				EEFF2BA22D133DD200ED55DC /* ContentView.swift */,
 				EEFF2BA42D133DD300ED55DC /* Assets.xcassets */,
 				EEFF2BA62D133DD300ED55DC /* Preview Content */,
 			);
@@ -138,6 +160,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEFF2BA32D133DD200ED55DC /* ContentView.swift in Sources */,
+				E891D7502D1342E400CD309F /* FetchData.swift in Sources */,
+				E891D7522D1342EF00CD309F /* ViewState.swift in Sources */,
 				EEFF2BA12D133DD200ED55DC /* NEW_YORKApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
