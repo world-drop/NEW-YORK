@@ -10,7 +10,7 @@ import Foundation
 struct FetchData{
     var response: Response = Response()
    mutating func getData() async{
-        let URLString = "https://newsapi.org/v2/everything?domains=wsj.com&apiKey=5ca02854d3ec4839b5d8c560565309e7"
+        let URLString = "https://api.nytimes.com/svc/mostpopular/v2/viewed/1.json?api-key=M7FrbQ7kU0c94amThLxhvC3EndVwFQnm"
         
         guard let url = URL(string: URLString) else {return}
         
