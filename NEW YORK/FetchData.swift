@@ -25,15 +25,31 @@ struct FetchData{
 
 struct Response: Codable{
     var status: String = "AHHHHHH"
-    var totalResults: Int = 0
-    var articles: [Article] = []
+    var num_results: Int = 0
+    var results: [Article] = []
 }
 
 struct Article: Codable{
     var title: String?
     var urlToImage: URL?
-    var url: String?
+    var media: Media
 }
+
+struct MediaMetadata: Codable {
+ var url: String
+ var format: String
+ var height: Int
+ var width: Int
+}
+struct Media: Codable {
+ var type: String
+ var mediaMetadata: [MediaMetadata]
+ 
+}
+
+
+
+
 
 
 extension Article: Identifiable{

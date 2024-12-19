@@ -24,12 +24,12 @@ struct ArticlesView: View {
             
             ScrollView{
                 
-                ForEach(data.response.articles){
+                ForEach(data.response.results){
                     article in
                     Button(action: {
                         
                         ArticleURL = article.url ?? "https://www.coolmathgames.com"
-                        viewState = .WebView
+                        viewState = .webView
                         
                     }, label: {
                         
@@ -67,5 +67,5 @@ struct ArticlesView: View {
 }
 
 #Preview {
-    ArticlesView(viewState: .constant(.articlelist),ArticleURL: .constant("www.coolmathgames.com"))
+    ArticlesView(viewState: .constant(.articleList),ArticleURL: .constant("www.coolmathgames.com"))
 }
