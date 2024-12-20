@@ -28,12 +28,12 @@ struct ArticlesView: View {
                     Button(action: {
                         
                         
-                        viewState = .webView
+//                        viewState = .webView
                         
                     }, label: {
                         
                         VStack{
-                            AsyncImage(URL:  article.image){
+                            AsyncImage(url:article.image){
                                 phase in switch phase{
                                 case.failure:Image("fnf")
                                         .resizable()
@@ -46,6 +46,7 @@ struct ArticlesView: View {
                                         .aspectRatio(contentMode: .fit)
                                         .padding()
                                         .frame(width: 400.0, height: 200.0)
+                                    
                                 default:
                                     ProgressView()
                                         .frame(width: 100.0, height: 200.0)

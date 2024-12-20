@@ -8,5 +8,5 @@
 import Foundation
 
 enum ViewState {
-    case articleList, webView
+    case articleList
 }

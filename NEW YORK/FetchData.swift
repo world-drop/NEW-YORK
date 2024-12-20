@@ -10,7 +10,7 @@ import Foundation
 struct FetchData{
     var response: Response = Response()
    mutating func getData() async{
-        let URLString = "https://rickandmortyapi.com/api/character/?name=rick&status=alive"
+        let URLString = "https://rickandmortyapi.com/api/character/"
         
         guard let url = URL(string: URLString) else {return}
         
@@ -24,8 +24,6 @@ struct FetchData{
 }
 
 struct Response: Codable{
-    var status: String = "AHHHHHH"
-    var num_results: Int = 0
     var results: [Article] = []
 }
 
