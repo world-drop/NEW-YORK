@@ -10,7 +10,6 @@ import SwiftUI
 struct ArticlesView: View {
     @Binding var viewState: ViewState
     @State var data: FetchData=FetchData()
-    @Binding var ArticleURL: String
 
     var body: some View {
         ZStack {
@@ -28,13 +27,13 @@ struct ArticlesView: View {
                     article in
                     Button(action: {
                         
-                        ArticleURL = article.url ?? "https://www.coolmathgames.com"
+                        
                         viewState = .webView
                         
                     }, label: {
                         
                         VStack{
-                            AsyncImage(url:  article.urlToImage){
+                            AsyncImage(URL:  article.image){
                                 phase in switch phase{
                                 case.failure:Image("fnf")
                                         .resizable()
@@ -52,7 +51,7 @@ struct ArticlesView: View {
                                         .frame(width: 100.0, height: 200.0)
                                 }
                             }
-                            Text(article.title ?? "")
+                            Text(article.name ?? "")
                         }
                         
                     })
@@ -67,5 +66,5 @@ struct ArticlesView: View {
 }
 
 #Preview {
-    ArticlesView(viewState: .constant(.articleList),ArticleURL: .constant("www.coolmathgames.com"))
+    ArticlesView(viewState: .constant(.articleList))
 }

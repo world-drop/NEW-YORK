@@ -10,7 +10,7 @@ import Foundation
 struct FetchData{
     var response: Response = Response()
    mutating func getData() async{
-        let URLString = "https://api.nytimes.com/svc/mostpopular/v2/viewed/1.json?api-key=M7FrbQ7kU0c94amThLxhvC3EndVwFQnm"
+        let URLString = "https://rickandmortyapi.com/api/character/?name=rick&status=alive"
         
         guard let url = URL(string: URLString) else {return}
         
@@ -30,28 +30,13 @@ struct Response: Codable{
 }
 
 struct Article: Codable{
-    var title: String?
-    var urlToImage: URL?
-    var media: Media
+    var name: String?
+    var image: URL?
+    var status: String?
 }
-
-struct MediaMetadata: Codable {
- var url: String
- var format: String
- var height: Int
- var width: Int
-}
-struct Media: Codable {
- var type: String
- var mediaMetadata: [MediaMetadata]
- 
-}
-
-
-
 
 
 
 extension Article: Identifiable{
-    var id: String {title ?? ""}
+    var id: String {name ?? ""}
 }
