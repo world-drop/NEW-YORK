@@ -9,7 +9,8 @@ import Foundation
 
 struct FetchData{
     var response: Response = Response()
-   mutating func getData() async{
+    
+    mutating func getData() async{
         let URLString = "https://rickandmortyapi.com/api/character/"
         
         guard let url = URL(string: URLString) else {return}

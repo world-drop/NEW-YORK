@@ -10,7 +10,7 @@ import SwiftUI
 struct ArticlesView: View {
     @Binding var viewState: ViewState
     @State var data: FetchData=FetchData()
-
+    @State var page: Int = 1
     var body: some View {
         ZStack {
             Rectangle()
@@ -20,7 +20,7 @@ struct ArticlesView: View {
                 .rotation(.degrees(45))
                 .ignoresSafeArea()
                 .foregroundColor(.red)
-            
+            VStack{
             ScrollView{
                 
                 ForEach(data.response.results){
@@ -62,9 +62,19 @@ struct ArticlesView: View {
             }.task {
                 await data.getData()
             }
+            Picker(selection: $page, label:
+                    Text("Page number:")){
+                ForEach(0...42, id: \.self) {
+                    value
+                    in Text("\(value)")}
+                .padding(.leading, -150.0)
+                .bold()
+            }
+            }
         }
     }
 }
+
 
 #Preview {
     ArticlesView(viewState: .constant(.articleList))
