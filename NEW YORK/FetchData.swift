@@ -6,12 +6,13 @@
 //
 
 import Foundation
-
+var page:Int = 1
 struct FetchData{
+    
     var response: Response = Response()
     
     mutating func getData() async{
-        let URLString = "https://rickandmortyapi.com/api/character/"
+        let URLString = "https://rickandmortyapi.com/api/character?page=\(page)"
         
         guard let url = URL(string: URLString) else {return}
         
@@ -22,6 +23,10 @@ struct FetchData{
         let dataString = String(data: data, encoding: .utf8)
         print(dataString ?? " ")
     }
+}
+
+func PageChange(P:Int){
+    page = P
 }
 
 struct Response: Codable{

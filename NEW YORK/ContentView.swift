@@ -8,14 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var viewState:ViewState = .articleList
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hell!")
-        }
-        .padding()
+       
+        ArticlesView(viewState: $viewState)
     }
 }
 
