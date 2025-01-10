@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		E891D7542D1347A900CD309F /* FetchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E891D7532D1347A900CD309F /* FetchData.swift */; };
 		E891D7562D1347B400CD309F /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E891D7552D1347B400CD309F /* ViewState.swift */; };
+		E891D7582D2DBF4900CD309F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E891D7572D2DBF4900CD309F /* Constants.swift */; };
+		E891D75A2D303F3100CD309F /* charView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E891D7592D303F3100CD309F /* charView.swift */; };
 		EE10E9742D149F4F0095AC53 /* ArticlesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE10E9732D149F4F0095AC53 /* ArticlesView.swift */; };
 		EEFF2BA12D133DD200ED55DC /* NEW_YORKApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFF2BA02D133DD200ED55DC /* NEW_YORKApp.swift */; };
 		EEFF2BA32D133DD200ED55DC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFF2BA22D133DD200ED55DC /* ContentView.swift */; };
@@ -19,6 +21,8 @@
 /* Begin PBXFileReference section */
 		E891D7532D1347A900CD309F /* FetchData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchData.swift; sourceTree = "<group>"; };
 		E891D7552D1347B400CD309F /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
+		E891D7572D2DBF4900CD309F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E891D7592D303F3100CD309F /* charView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = charView.swift; sourceTree = "<group>"; };
 		EE10E9732D149F4F0095AC53 /* ArticlesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesView.swift; sourceTree = "<group>"; };
 		EEFF2B9D2D133DD200ED55DC /* NEW YORK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NEW YORK.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEFF2BA02D133DD200ED55DC /* NEW_YORKApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NEW_YORKApp.swift; sourceTree = "<group>"; };
@@ -59,7 +63,9 @@
 			children = (
 				E891D7532D1347A900CD309F /* FetchData.swift */,
 				EE10E9732D149F4F0095AC53 /* ArticlesView.swift */,
+				E891D7592D303F3100CD309F /* charView.swift */,
 				E891D7552D1347B400CD309F /* ViewState.swift */,
+				E891D7572D2DBF4900CD309F /* Constants.swift */,
 				EEFF2BA22D133DD200ED55DC /* ContentView.swift */,
 				EEFF2BA02D133DD200ED55DC /* NEW_YORKApp.swift */,
 				EEFF2BA42D133DD300ED55DC /* Assets.xcassets */,
@@ -148,9 +154,11 @@
 			files = (
 				EEFF2BA32D133DD200ED55DC /* ContentView.swift in Sources */,
 				E891D7562D1347B400CD309F /* ViewState.swift in Sources */,
+				E891D75A2D303F3100CD309F /* charView.swift in Sources */,
 				EE10E9742D149F4F0095AC53 /* ArticlesView.swift in Sources */,
 				E891D7542D1347A900CD309F /* FetchData.swift in Sources */,
 				EEFF2BA12D133DD200ED55DC /* NEW_YORKApp.swift in Sources */,
+				E891D7582D2DBF4900CD309F /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
