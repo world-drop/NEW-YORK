@@ -10,10 +10,13 @@ import SwiftUI
 struct charView: View {
     @Binding var viewState: ViewState
     @State var data: FetchData=FetchData()
-
+    
     
     var body: some View {
- 
+        ForEach(data.response.results){
+            article in
+            
+        }
     Text("penis")
         
 

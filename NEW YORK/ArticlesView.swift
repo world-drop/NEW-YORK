@@ -11,6 +11,8 @@ struct ArticlesView: View {
     @Binding var viewState: ViewState
     @State var data: FetchData=FetchData()
     @State var page: Int = 1
+    @Binding var Page: String
+    @Binding var CharId: Int
     var body: some View {
       
             
@@ -26,7 +28,10 @@ struct ArticlesView: View {
                         ForEach(data.response.results){
                             article in
                             Button(action: {
-                              
+                                viewState = .charView
+                                
+                                Page = "https://rickandmortyapi.com/api/character?page=\(page)"
+                                
                                 
                             }, label: {
                                 
@@ -68,7 +73,7 @@ struct ArticlesView: View {
                     }
                     Picker(selection: $page, label:
                             Text("Page number:")){
-                        ForEach(0...42, id: \.self) {
+                        ForEach(1...42, id: \.self) {
                             value
                             in Text("\(value)")}
                         .onChange(of: page, perform:
@@ -94,5 +99,5 @@ struct ArticlesView: View {
 
 
 #Preview {
-    ArticlesView(viewState: .constant(.articleList))
+    ArticlesView(viewState: .constant(.articleList), Page: .constant(""), CharId: .constant(1))
 }
