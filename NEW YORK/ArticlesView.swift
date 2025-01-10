@@ -26,9 +26,7 @@ struct ArticlesView: View {
                         ForEach(data.response.results){
                             article in
                             Button(action: {
-                                NavigationLink(destination: charView(viewState: <#Binding<ViewState>#>)){
-                                    charView(viewState: <#Binding<ViewState>#>)
-                                }
+                              
                                 
                             }, label: {
                                 

@@ -10,8 +10,13 @@ import SwiftUI
 struct ContentView: View {
     @State var viewState:ViewState = .articleList
     var body: some View {
-       
-        ArticlesView(viewState: $viewState)
+        if viewState == .articleList{
+            ArticlesView(viewState: $viewState)
+        }
+        else {
+            charView(viewState: $viewState)
+        }
+        
     }
 }
 
