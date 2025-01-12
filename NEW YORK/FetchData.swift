@@ -36,11 +36,12 @@ struct Response: Codable{
 struct Article: Codable{
     var name: String?
     var image: URL?
+    var id: Int?
     var status: String?
 }
 
 
 
 extension Article: Identifiable{
-    var id: String {name ?? ""}
+    var ID: String {name ?? ""}
 }
