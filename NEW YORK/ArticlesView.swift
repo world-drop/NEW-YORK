@@ -21,13 +21,13 @@ struct ArticlesView: View {
                     .resizable()
                     .ignoresSafeArea()
                 
-                NavigationView{
                     VStack{
                         ScrollView{
                             
                             ForEach(data.response.results){
                                 article in
                                 Button(action: {
+                                    CharId = article.id ?? 1
                                     viewState = .charView
                                     
                                     Page = page
@@ -94,7 +94,7 @@ struct ArticlesView: View {
                     }
                 }
         }
-    }
+    
 }
 
 

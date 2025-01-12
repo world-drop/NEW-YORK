@@ -63,5 +63,5 @@ struct charView: View {
     }
 }
 #Preview {
-    charView(viewState: .constant(.articleList), Page: .constant(1), CharId: .constant(1))
+    charView(viewState: .constant(.articleList), Page: .constant(1), CharId: .constant(11))
 }
