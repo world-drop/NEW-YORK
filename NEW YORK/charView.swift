@@ -23,6 +23,11 @@ struct charView: View {
                 if article.id == CharId{
                     
                     VStack{
+                        Button(action: {
+                            viewState = .articleList
+                        }, label: {
+                            Text("Return")
+                        })
                         AsyncImage(url:article.image){
                             phase in switch phase{
                             case.failure:Image("fnf")
